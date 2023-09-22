@@ -75,3 +75,13 @@ func Run(ctx *cli.Context) error {
 	*/
 	return Select(ctx, name, ctx.Bool(loginFlags.SetDefault.Name))
 }
+
+
+/*
+Additional Comment:
+
+A small thing I noticed was that the urfave cli expects a cli.ActionFunc
+instead of func(*cli.context) which is deprecated. The documentation mentions 
+support for this signature will be removed in a future version, so it might be
+worth looking into updating.
+*/
